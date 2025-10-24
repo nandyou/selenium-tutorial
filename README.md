@@ -29,7 +29,9 @@
    PS. Select the "chromedriver" binary for your relevant machine type (ie. mac, linux, win32 or win64)
 
    4.1 copy the url from the below page and paste it in another tab of the browser to download.
+   
    4.2 extract the zip file
+
    4.3 copy the path of chromedriver.exe and keep it handy
 
    ![selecting chrome driver](chromedriver.png "example")
