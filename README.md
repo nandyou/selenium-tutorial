@@ -28,6 +28,8 @@
 
    PS. Select the "chromedriver" binary for your relevant machine type (ie. mac, linux, win32 or win64)
 
+   copy the url from the below page and paste it in another tab of the browser to download. 
+
    ![selecting chrome driver](chromedriver.png "example")
 
 6. Start IDEA and Create new project
