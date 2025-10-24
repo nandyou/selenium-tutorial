@@ -28,7 +28,9 @@
 
    PS. Select the "chromedriver" binary for your relevant machine type (ie. mac, linux, win32 or win64)
 
-5. Start IDEA and Create new project
+   ![selecting chrome driver](chromedriver.png "example")
+
+6. Start IDEA and Create new project
    - Select Project type as java
    - build tool as maven
    - tick the checkbox to select "create new git repository"
