@@ -8,7 +8,7 @@
          where java
          java -version
      '''
-     
+
 2. Install Maven 3.9
    download maven from here - [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
 
