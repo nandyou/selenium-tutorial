@@ -36,10 +36,17 @@
 
    ![selecting chrome driver](chromedriver.png "example")
 
-6. Start IDEA and Create new project
+5. Start IDEA and Create new project
    - Select Project type as java
    - build tool as maven
    - tick the checkbox to select "create new git repository"
   
+ 
+ 
+ 
+ 6. Selenium provides multiple sample html files for testing and learning purpose - 
+ 
+ refer them here - https://www.selenium.dev/selenium/web/index.html
+ 
   
 
