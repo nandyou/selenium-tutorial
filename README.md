@@ -12,6 +12,7 @@
 
 **For Edge use :**  \
 **Property to set** - System.setProperty("webdriver.edge.driver", "C://EdgeDriver.exe"); \ 
+
 **Download url** - https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads \
  
 **For Chrome use:** \
