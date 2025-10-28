@@ -15,6 +15,6 @@
 **Download url** - https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads 
  
 ### For Chrome use:
-**Property to set** - System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe"); 
+**Property to set** - System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe"); \
 **Download url** - https://googlechromelabs.github.io/chrome-for-testing/  
  
