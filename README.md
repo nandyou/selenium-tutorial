@@ -6,7 +6,7 @@
  
   
 
-**For Firefox use : ** \
+**For Firefox use :** \
 **Property to set** - System.setProperty("webdriver.gecko.driver","//<path to driver>//geckodriver"); \
 **Download url** - https://github.com/mozilla/geckodriver/releases \
 
@@ -14,7 +14,7 @@
 **Property to set** - System.setProperty("webdriver.edge.driver", "C://EdgeDriver.exe");\ 
 **Download url** - https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads\
  
-**For Chrome use: **\
+**For Chrome use:**\
 **Property to set** - System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe"); \
 **Download url** - https://googlechromelabs.github.io/chrome-for-testing/  \
  
