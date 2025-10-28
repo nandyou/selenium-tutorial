@@ -4,3 +4,5 @@
  
   
 
+For Firefox use :  
+System.setProperty("webdriver.gecko.driver","<path to driver>//geckodriver");
