@@ -52,7 +52,7 @@
 Implicit Waits
 An implicit wait tells WebDriver to poll the DOM for a certain amount of time when trying to find any element (or elements) not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object. Let's consider an example.
 
-'''
+```
 # import webdriver
 from selenium import webdriver
 
@@ -66,7 +66,7 @@ driver.get("http://somedomain / url_that_delays_loading")
 
 # get element after 10 seconds ( Replace myDynamicElement elememnt with your elememnt id )
 myDynamicElement = driver.find_element_by_id("myDynamicElement")
-'''
+```
 
 This waits up to 10 seconds before throwing a Timeout Exception unless it finds the element to return within 10 seconds. To check out how to practically implement Implicit Waits in WebDriver, checkout.
 
