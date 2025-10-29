@@ -10,6 +10,9 @@
 
 5. Go Back to extention window and click Stop Recording
 
+6. here you can now see all the driver commands to select the elements. you need to review them to see if they are correct 
+    ![Sample Recording](./TestCaseRecord.png "Example Test Case Recording!")
+
 
 
 
