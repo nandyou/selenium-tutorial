@@ -49,26 +49,63 @@
 ### What are different wait times?
 ### What is difference between implicit vs explicit vs fluent wait?
 
-Implicit Waits
-An implicit wait tells WebDriver to poll the DOM for a certain amount of time when trying to find any element (or elements) not immediately available. The default setting is 0. Once set, the implicit wait is set for the life of the WebDriver object. Let's consider an example.
+#### Implicit Waits
+- An Implicit Wait is a global timeout that Selenium will apply to all element searches. 
+- This means that Selenium will wait for the specified amount of time before throwing a Error  if an element is not found in the DOM.
+- The default setting is 0. 
+- Once set, the implicit wait is set for the life of the WebDriver object. Let's consider an example.
+- This waits up to 10 seconds before throwing a Timeout Exception unless it finds the element to return within 10 seconds. 
+
+Pros:
+- <todo>
+
+Cons:
+- <todo>
 
 ```
-# import webdriver
-from selenium import webdriver
-
-driver = webdriver.Firefox()
-
-# set implicit wait time
-driver.implicitly_wait(10) # seconds
-
-# get url (Replace sample URL with your URL )
-driver.get("http://somedomain / url_that_delays_loading")
-
-# get element after 10 seconds ( Replace myDynamicElement elememnt with your elememnt id )
-myDynamicElement = driver.find_element_by_id("myDynamicElement")
+    // Set Implicit Wait for 10 seconds
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    
+    // Navigate to Saucedemo
+    driver.get("https://www.saucedemo.com/");
+    
+    // Find the username field (Implicit wait will apply here)
+    WebElement usernameField = driver.findElement(By.id("user-name"));
+    
+    // Enter username
+    usernameField.sendKeys("standard_user");
+    System.out.println("Username entered successfully.");
 ```
 
-This waits up to 10 seconds before throwing a Timeout Exception unless it finds the element to return within 10 seconds. To check out how to practically implement Implicit Waits in WebDriver, checkout.
+#### Explicit Waits
+- An Explicit Wait allows you to wait for a specific condition to be met before proceeding with the next step in the test. Unlike implicit waits, you can use this wait for individual elements with specific conditions, such as the element being visible or clickable.
+- Explicit waits are more precise and efficient, as they only apply to the specific conditions you define.
+
+** Pros: **
+- Explicit wait in Selenium offers more precision by waiting only for specific conditions, such as visibility or clickability of elements.
+- It is faster than implicit wait because it targets particular elements rather than applying a global wait to all elements
+- Explicit wait provides clear error messages, such as TimeoutException, when the specified condition is not met, making it easier to debug and handle test failures effectively.
+** Cons: ** 
+- Explicit wait requires more code compared to implicit waits because you need to specify the conditions for each wait
+- This adds complexity, as you must define what exactly you're waiting for (e.g., visibility, clickability, presence) for every element.
+
+
+```
+    // Navigate to Saucedemo
+    driver.get("https://www.saucedemo.com/");
+    
+    // Wait up to 10 seconds for username field to be clickable
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebElement usernameField = wait.until(
+        ExpectedConditions.elementToBeClickable(By.id("user-name"))
+    );
+    
+    // Enter username
+    usernameField.sendKeys("standard_user");
+```
+
+#### Fluent Wait
+<todo>
 
 
 
