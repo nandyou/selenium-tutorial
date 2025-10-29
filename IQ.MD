@@ -104,7 +104,7 @@ Cons:
     usernameField.sendKeys("standard_user");
 ```
 
-#### Fluent Wait
+#### <span style="color:red">Fluent Wait</span>
 <todo>
 
 
