@@ -32,12 +32,7 @@ public class LocatorsForComplexQueries {
 	        String inputText = textBox.getText();
 	        
 	        
-	        if(!inputText.equals("change")) {
-	        	System.out.println("Existing value is -" + inputText);
-	        	System.out.println("Test Failed for existing input text");
-	        }else {
-	        	System.out.println("Test Passed for existing input text");
-	        }
+	        extracted(inputText, "existing  input text", "change");
 	        
 	        
 	        //How to clear a value in an input box using its handle
@@ -45,18 +40,14 @@ public class LocatorsForComplexQueries {
 	        
 	        String clearInputText = textBox.getText();
 	        
-	        if(!clearInputText.isEmpty()) {
-	        	System.out.println("After Clear input Text is -" + clearInputText);
-	        	System.out.println("Test Failed for Clear command on input text");
-	        }else {
-	        	System.out.println("Test Passed for Clear command on input text");
-	        }
+	        extracted(clearInputText, "Clear command on input text", "");
 	        
 	        //How to input a value in an input box using its handle
 	        textBox.sendKeys("Changed");
 	        
 	        String newInputText = textBox.getText();
 	        
+	        extracted(newInputText, "Cnew input text", "changed");
 	        
 	        if(!newInputText.equals("changed")) {
 	        	System.out.println("New value is -" + newInputText);
@@ -65,12 +56,18 @@ public class LocatorsForComplexQueries {
 	        	System.out.println("Test Passed for new input text");
 	        }
 	        
-	        
-	        	       
-
 	        driver.quit();
 		
 
+	}
+
+	private static void extracted(String inputText, String stringToPrint,String expectedValue) {
+		if(!inputText.equals(expectedValue)) {
+			System.out.println(stringToPrint+ " value is -" + inputText);
+			System.out.println("Test Failed for " + stringToPrint);
+		}else {
+			System.out.println("Test Passed for " + stringToPrint);
+		}
 	}
 
 }

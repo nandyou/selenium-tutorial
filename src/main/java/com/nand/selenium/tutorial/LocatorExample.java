@@ -41,6 +41,16 @@ public class LocatorExample {
         WebElement forgotLink = driver.findElement(By.xpath("//a[text()='Forgot Password?']"));
         forgotLink.click();
         
+        
+        // Example command to go back to previous page.
+        driver.navigate().back();
+        
+        // Example command to go forward after we come back .
+        driver.navigate().forward();
+        
+        // Example command to refresh using the browser control.
+        driver.navigate().refresh();
+        
         WebElement backLink = driver.findElement(By.xpath("//a[text()='Back']"));
         backLink.click();
 
