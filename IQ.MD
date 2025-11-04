@@ -56,12 +56,6 @@
 - Once set, the implicit wait is set for the life of the WebDriver object. Let's consider an example.
 - This waits up to 10 seconds before throwing a Timeout Exception unless it finds the element to return within 10 seconds. 
 
-Pros:
-- <todo>
-
-Cons:
-- <todo>
-
 ```
     // Set Implicit Wait for 10 seconds
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
