@@ -105,8 +105,32 @@ Cons:
 ```
 
 #### <span style="color:red">Fluent Wait</span>
-<todo>
+- Fluent wait is an explicit wait in Selenium that pings the web driver to wait for a circumstance and how regularly to check that scenario before returning an “ElementNotVisibleException” exception.
+- To better understand, a fluent wait is also called a smart wait because it does not “wait” out the whole predetermined time as coded.
+- Rather, the test proceeds to run as soon as the element is visible.
 
+```
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
+# Create driver object
+driver = webdriver.Firefox()
+
+# Navigate to a URL that delays loading (Replace sample URL with your URL )
+driver.get("http://somedomain/url_that_delays_loading")
+
+try:
+    # Fluent wait for the element to be present
+    # ( Replace myDynamicElement elememnt with your elememnt id )
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "myDynamicElement"))
+    )
+finally:
+    # Quit the driver
+    driver.quit()
+
+```
 
 Credits- https://www.geeksforgeeks.org/software-testing/selenium-webdriver-vs-rc-vs-ide/
