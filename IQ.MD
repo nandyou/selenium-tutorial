@@ -127,4 +127,39 @@ finally:
 
 ```
 
+
+### When will you avoid Automation Testing?
+- Functionality changes regularly: The software or functionality under test changes regularly thus the automated tests need to be updated frequently. Hence, the test can soon become obsolete and cease to be useful.
+- Inefficient for UI bugs: Automated tests unless not programmed to check for UI flaws will not find any.
+- Not appropriate for exploratory testing: Exploratory testing is also not appropriate for automated testing.
+- Tests that cannot be automated 100%: Tests that cannot be automated 100% should not be automated at all unless it saves considerable time in automating them.
+- Tests requiring random testing: Tests that require random testing based on domain expertise should not be automated.
+
+
+### Explain Different Types of Automation Tests.
+Here are the Different Types of Automation Tests:
+
+- Functional Testing: Functional testing focuses on assessing the software against the set of functional requirements and testing the main functions of the system.
+- Unit Testing (developers): Unit testing involves testing the individual components of the system in isolation to verify that they are working as required.
+- Integration Testing: Integration testing involves testing all the various units of the application in unity to verify whether the system as a whole complies with the functional requirements set or not.
+- Smoke Testing: Smoke testing also known as confidence testing involves assessing the stability and viability of the deployed build of the software.
+- Non-functional Testing: Non-functional testing involves testing all the non-functional requirements of an application.
+- Performance Testing: Performance testing involves testing the software's speed, responsiveness, and stability under workload.
+- Regression Testing: Regression testing involves rerunning of functional and non-functional tests to see if the software is performing the same way as before after some changes in the code have been made.
+- Keyword-driven Testing: Keyword-driven testing involves identifying the keywords and connecting them with specific actions. Every time the keyword is used, related action will be automatically done.
+- Data-driven Testing: Data-driven testing involves using external data that is stored in the spreadsheet format or tables to extend automated tests.
+
+
+### List factors that define the success of Automation Testing.
+Some of the factors that are used to check the effectiveness of automation testing are:
+
+- Reusability
+- Time-saving
+- Quality of the software
+- Maintenance
+- Installment costs
+- Test coverage
+- The number of bugs found.
+
+
 Credits- https://www.geeksforgeeks.org/software-testing/selenium-webdriver-vs-rc-vs-ide/
