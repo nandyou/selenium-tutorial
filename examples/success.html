@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login Successful</h1>
+  <form id="resultForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" readonly />
+
+    <label for="password">Password</label>
+    <input type="text" id="password" readonly />
+  </form>
+
+  <script>
+    // Read query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Get values for 'user' and 'pass'
+    const username = params.get('user') || 'Not provided';
+    const password = params.get('pass') || 'Not provided';
+
+    // Display values in the form fields
+    document.getElementById('username').value = username;
+    document.getElementById('password').value = password;
+  </script>
+</body>
+</html>
