@@ -31,11 +31,9 @@
 
 
 
-### Complex Scenario for validation or comparing a value
+### Complex Scenario for validation or comparing a text value
 
 ```
-
-
 //Identify the element
 WebElement username = driver.findElement(By.id("username"));
 
@@ -44,13 +42,112 @@ String currentUsernameValue = username.getDomAttribute("value");
 
 //Compare the string value with expected value
 if(currentUsernameValue.equals("expected user name value here ")){
-    
     System.out.println("Pass");
 else {
     System.out.println("Fail");
-
 }
+```
 
 
+
+### Complex Scenario for validation or comparing a number value
 
 ```
+//Identify the element
+WebElement applesElement = driver.findElement(By.id("Apples"));
+
+//Get the value of element
+String numberOfApplesInText = applesElement.getDomAttribute("value");
+
+//Convert String to Integer
+int numberOfApples = Integer.parseInt(numberOfApplesInText);
+
+//Compare the number value with expected value
+if(numberOfApples > 12)  
+    System.out.println("Pass");
+else {
+    System.out.println("Fail");
+}
+```
+
+### Complex Scenario for validation or comparing a decimal number value
+
+```
+//Identify the element
+WebElement amountElement = driver.findElement(By.id("Apples"));
+
+//Get the value of element
+String amountText = amountElement.getDomAttribute("value");
+
+//Convert String to Integer
+double amount = Double.parseDouble(amountText)
+
+//Compare the number value with expected value
+if(amount == 12.12)  
+    System.out.println("Pass");
+else {
+    System.out.println("Fail");
+}
+```
+
+
+### Complex Scenario for finding out selected checkboxes
+
+```
+// Find all checkboxes by name or common locator
+List<WebElement> checkboxes = driver.findElements(By.name("options"));
+
+// List to store text/values of selected checkboxes
+List<String> selectedValues = new ArrayList<>();
+
+// Loop through all checkboxes
+for (WebElement checkbox : checkboxes) {
+    if (checkbox.isSelected()) {
+        // You can use getAttribute("value") or nearby text
+        String value = checkbox.getAttribute("value");
+        selectedValues.add(value);
+    }
+}
+
+// Print selected checkbox values
+System.out.println("Selected checkboxes: " + selectedValues);
+
+// Compare if a specific value is present in the list
+String searchValue = "Java";
+if (selectedValues.contains(searchValue)) {
+    System.out.println(searchValue + " is selected ✅");
+} else {
+    System.out.println(searchValue + " is not selected ❌");
+}
+```
+
+
+### Complex Scenario for finding out selected radio button
+
+```
+// Find all radio buttons in the same group (name="gender")
+List<WebElement> radioButtons = driver.findElements(By.name("gender"));
+
+String selectedValue = null;
+
+// Loop through each radio button to check which one is selected
+for (WebElement radio : radioButtons) {
+    if (radio.isSelected()) {
+        selectedValue = radio.getAttribute("value");
+        break; // stop after finding the selected one
+    }
+}
+
+// Display the selected radio button value
+System.out.println("Selected gender: " + selectedValue);
+
+// Compare the selected value with expected text
+String expectedValue = "Female";
+
+if (selectedValue != null && selectedValue.equalsIgnoreCase(expectedValue)) {
+    System.out.println("✅ " + expectedValue + " is selected.");
+} else {
+    System.out.println("❌ " + expectedValue + " is NOT selected.");
+}
+```
+
